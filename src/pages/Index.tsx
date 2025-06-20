@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Facebook, Instagram, Youtube, ExternalLink } from "lucide-react";
 
 const Index = () => {
   const ideas = [
@@ -10,6 +10,30 @@ const Index = () => {
     "เว็บไซต์รีวิวร้านขายของเก่า",
     "แอปหาเพื่อนไปดูหนังคนเดียว",
     "บริการจ้างคนมาฟังเราบ่น"
+  ];
+
+  const projects = [
+    {
+      title: "โปรเจค A",
+      description: "Something amazing we're building",
+      status: "กำลังทำ",
+      url: "#",
+      progress: "60%"
+    },
+    {
+      title: "โปรเจค B", 
+      description: "Another brilliant idea in progress",
+      status: "เสร็จแล้ว",
+      url: "#",
+      progress: "100%"
+    },
+    {
+      title: "โปรเจค C",
+      description: "Work in progress (emphasis on progress)",
+      status: "เพิ่งเริ่ม",
+      url: "#",
+      progress: "15%"
+    }
   ];
 
   return (
@@ -82,6 +106,70 @@ const Index = () => {
                 </div>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="container mx-auto px-4 py-16 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">
+            โปรเจคที่กำลังทำอยู่
+          </h2>
+          <p className="text-center text-gray-600 mb-12">
+            ผลงานที่เราทำจริง (บางอันเสร็จแล้ว บางอันก็...)
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 bg-white border-2 border-gray-100 hover:border-yellow-300">
+                <div className="space-y-4">
+                  <div className="flex justify-between items-start">
+                    <h3 className="text-lg font-bold text-gray-800">{project.title}</h3>
+                    <a 
+                      href={project.url} 
+                      className="text-yellow-600 hover:text-yellow-700 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={18} />
+                    </a>
+                  </div>
+                  
+                  <p className="text-gray-600 text-sm">{project.description}</p>
+                  
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-500">Progress:</span>
+                      <span className="font-semibold text-yellow-600">{project.progress}</span>
+                    </div>
+                    
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div 
+                        className="bg-yellow-500 h-2 rounded-full transition-all duration-500"
+                        style={{ width: project.progress }}
+                      ></div>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
+                      project.status === 'เสร็จแล้ว' ? 'bg-green-100 text-green-800' :
+                      project.status === 'กำลังทำ' ? 'bg-yellow-100 text-yellow-800' :
+                      'bg-gray-100 text-gray-800'
+                    }`}>
+                      {project.status}
+                    </span>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-500 text-sm">
+              มีโปรเจคอื่นๆ อีกเยอะ แต่ยังไม่กล้าแชร์ 😅
+            </p>
           </div>
         </div>
       </section>
