@@ -18,7 +18,7 @@ const Index = () => {
       title: "🥊 SplitFight",
       description: "ใครแดกเท่าไหร่ จ่ายเท่านั้น มิตรภาพปลอดภัย",
       status: "เสร็จแล้ว",
-      url: "#",
+      url: "https://www.splitfight.yaktumaraisakyang.work",
       progress: "100%"
     },
     // {
@@ -64,7 +64,7 @@ const Index = () => {
           </div>
 
           {/* Main Headlines */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-[2] animate-fade-in animation-delay-300">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-nomal animate-fade-in animation-delay-300">
             ยังไม่รู้จะทำอะไร...<br />
             <span className="text-yellow-600 hover:text-yellow-700 transition-colors duration-300">แต่รู้ว่าต้องเริ่มซักอย่าง</span>
           </h1>
