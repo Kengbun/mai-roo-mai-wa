@@ -9,31 +9,32 @@ const Index = () => {
     "AI ที่คิดแทนเราว่าจะกินอะไรวันนี้",
     "เว็บไซต์รีวิวร้านขายของเก่า",
     "แอปหาเพื่อนไปดูหนังคนเดียว",
-    "บริการจ้างคนมาฟังเราบ่น"
+    "บริการจ้างคนมาฟังเราบ่น",
+    "แอปช่วยคิดว่าจะทําอะไรดี"
   ];
 
   const projects = [
     {
-      title: "โปรเจค A",
-      description: "Something amazing we're building",
-      status: "กำลังทำ",
-      url: "#",
-      progress: "60%"
-    },
-    {
-      title: "โปรเจค B", 
-      description: "Another brilliant idea in progress",
+      title: "🥊 SplitFight",
+      description: "ใครแดกเท่าไหร่ จ่ายเท่านั้น มิตรภาพปลอดภัย",
       status: "เสร็จแล้ว",
       url: "#",
       progress: "100%"
     },
-    {
-      title: "โปรเจค C",
-      description: "Work in progress (emphasis on progress)",
-      status: "เพิ่งเริ่ม",
-      url: "#",
-      progress: "15%"
-    }
+    // {
+    //   title: "โปรเจค B", 
+    //   description: "Another brilliant idea in progress",
+    //   status: "เสร็จแล้ว",
+    //   url: "#",
+    //   progress: "100%"
+    // },
+    // {
+    //   title: "โปรเจค C",
+    //   description: "Work in progress (emphasis on progress)",
+    //   status: "เพิ่งเริ่ม",
+    //   url: "#",
+    //   progress: "15%"
+    // }
   ];
 
   // Calculate completed projects
@@ -44,7 +45,7 @@ const Index = () => {
       {/* Header */}
       <header className="container mx-auto px-4 py-6 animate-fade-in">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800 hover:text-yellow-600 transition-colors duration-300">YakTumAraiSakYang.com</h1>
+          <h1 className="text-2xl font-bold text-gray-800 hover:text-yellow-600 transition-colors duration-300">YakTumAraiSakYang</h1>
         </div>
       </header>
 
@@ -55,7 +56,7 @@ const Index = () => {
           <div className="mb-8 animate-fade-in animation-delay-200">
             <div className="inline-block p-6 bg-yellow-100 rounded-full animate-bounce hover:animate-pulse transition-all duration-300 hover:scale-110">
               <img 
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=120&h=120&fit=crop&crop=center" 
+                src="../../public/img-upload/Lovepik_com-380547583-brain-clipart-cartoon-brain-with-and-other-cartoon-characters-on-it-illustration-vector.png" 
                 alt="Confused robot"
                 className="w-24 h-24 rounded-full object-cover transition-transform duration-300 hover:rotate-12"
               />
@@ -80,8 +81,9 @@ const Index = () => {
           {/* CTA Button */}
           <div className="animate-fade-in animation-delay-600">
             <Button 
+            disabled
               size="lg" 
-              className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-2xl animate-pulse hover:animate-none"
+              className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-2xl  hover:animate-none"
             >
               เดี๋ยวคิดออกแล้วจะบอก
             </Button>
@@ -236,7 +238,9 @@ const Index = () => {
               placeholder="your.email@example.com"
               className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-300 hover:border-yellow-400"
             />
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-md hover:shadow-lg">
+            <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-md hover:shadow-lg"
+            disabled
+            >
               Subscribe
             </Button>
           </div>
