@@ -36,6 +36,9 @@ const Index = () => {
     }
   ];
 
+  // Calculate completed projects
+  const completedProjects = projects.filter(project => project.status === 'เสร็จแล้ว').length;
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white">
       {/* Header */}
@@ -188,9 +191,11 @@ const Index = () => {
                 <div className="text-sm text-gray-500 mt-1">All forgotten immediately</div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="text-3xl font-bold text-yellow-600 mb-2">0</div>
+                <div className="text-3xl font-bold text-yellow-600 mb-2">{completedProjects}</div>
                 <div className="text-gray-700">Projects Completed</div>
-                <div className="text-sm text-gray-500 mt-1">But we're getting there!</div>
+                <div className="text-sm text-gray-500 mt-1">
+                  {completedProjects > 0 ? "Getting there!" : "But we're getting there!"}
+                </div>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <div className="text-3xl font-bold text-yellow-600 mb-2">100%</div>
